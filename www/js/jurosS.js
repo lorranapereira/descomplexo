@@ -24,7 +24,7 @@ form.addEventListener('submit', function(e) {
         p3.textContent = "M = C + J";
         p4.textContent = "M = "+parseInt(c*(i/100)*t+c);
         contem.appendChild(p1);
-        contem.appendChild(p2); 
+        contem.appendChild(p2);
         contem.appendChild(p3);
         contem.appendChild(p4);
         return "";
