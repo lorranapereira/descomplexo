@@ -32,39 +32,42 @@
       </div>
     </nav>
     <div class="container">
-        <ul class="list-group">
-    <li class="list-group-item"><a href="resol1.html">Razão, proporção e regra de três</a></li>
-    <li class="list-group-item"><a href="#">Porcentagem, juros simples e composto</a></li>
-    <li class="list-group-item"><a href="#">Áreas e perímetros</a></li>
-</ul>
-<div class="options">
-    <label for="">Selecine a operação</label>
-    <div class="div-select">
-        <select name="" id="select">
-            <option value="razao.html">Razão</option>
-            <option value="proporcao.html">Proporção e Regra de três</option>
-        </select>
-        <br>
-    </div>
-</div>
-<form id="form">
-    <label for="">x1</label>
-    <input type="text" value="" id="x"><br>
-    <label for="">x2</label>
-    <input type="number" value="" id="y" name="y">
-    <div class="resolucao"><strong>Resolução</strong>
-        <div id="contem">
-        
+     <ul class="list-group">
+        <li class="list-group-item"><a href="resol1.html">Razão, proporção e regra de três</a></li>
+        <li class="list-group-item"><a href="resol2.html">Porcentagem, juros simples e composto</a></li>
+        <li class="list-group-item"><a href="resol3.html">Áreas e perímetros</a></li>
+    </ul>
+    <div class="options">
+        <label for=""></label>
+        <div class="div-select">
+            <select name="" id="select">
+                <option value="razao.html">Razão</option>
+                <option value="proporcao.html">Proporção e Regra de três</option>
+            </select>
+            <br/>
         </div>
-    </div> 
-    <input type="submit" value="enviar">
-</form>
-<script src="js/razao.js"></script>
-<script src="js/redireciona.js"></script>
     </div>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <form class="form-style-4" action="" method="post" id="form">
+        <label for="field1">
+            <span>Dígite o valor de x</span><input type="number" name="field1" required="true" id="x"/>
+        </label>
+        <label for="field2">
+            <span>Dígite o valor de y</span><input type="number" name="field2" required="true" id="y" />
+        </label>
+        <label>
+            <span>&nbsp;</span><input type="submit" value="Calcular" />
+        </label>
+        <div class="resolucao"><strong>Resolução</strong>
+            <div id="contem">
+            </div>
+        </div> 
+    </form>
+  </div>
+    
+  <script src="js/razao.js"></script>
+  <script src="js/redireciona.js"></script>
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
   </body>
 
