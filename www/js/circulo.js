@@ -13,7 +13,7 @@ class Raio {
     let button = document.createElement("BUTTON");
     var img = document.createElement("IMG");
     img.src =
-    "https://conversor-de-medidas.com/geometria/circulo/area/formula-da-area-do-circulo.png";
+    "http://conversor-de-medidas.com/geometria/circulo/area/formula-da-area-do-circulo.png";
     button.type = "submit";
     button.style.width = "100px";
     button.textContent = "Calcular";
@@ -46,7 +46,7 @@ class Cilindro {
     let button = document.createElement("BUTTON");
     var img = document.createElement("IMG");
     img.src =
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Cylinder_geometry.svg/518px-Cylinder_geometry.svg.png";
+    "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Cylinder_geometry.svg/518px-Cylinder_geometry.svg.png";
     img.style.width = "100px";
     button.type = "submit";
     button.style.width = "100px";
