@@ -6,7 +6,7 @@ a {
 body {
     position: relative;
     width: 9.9%; 
-    background-image: url(logoFundo.png);
+    background-color: #616467;
 }
 nav.sidebar, #navicon {
     visibility: hidden;
@@ -39,7 +39,7 @@ nav{
     top:-3em;
     left: 50%;
     width: 900%;
-    height: 900px;
+    height: 1100px;
     border-style:groove;
     background-color: white;
 }
@@ -102,6 +102,11 @@ div.jogo {
     width: 30em;
     height: 10em;
     -ms-text-size-adjust: 20px;
+}
+#contem img {
+    position: relative;
+    width: 20em;
+    height: 10em;   
 }
 #contem p{
     position: relative;
