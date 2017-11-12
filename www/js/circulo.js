@@ -13,7 +13,7 @@ class Raio {
     let button = document.createElement("BUTTON");
     var img = document.createElement("IMG");
     img.src =
-    "http://conversor-de-medidas.com/geometria/circulo/area/formula-da-area-do-circulo.png";
+    "https://conversor-de-medidas.com/geometria/circulo/area/formula-da-area-do-circulo.png";
     button.type = "submit";
     button.style.width = "100px";
     button.textContent = "Calcular";
