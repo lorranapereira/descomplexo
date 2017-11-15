@@ -7,7 +7,7 @@ var pergunta = [" Considere as afirmações abaixo: I. O cubo de 0,2 é 0,8.II. 
 var resposta = [["a) Somente a afirmação II está correta.","b) Somente as afirmações I e II estão corretas.","c) Somente as afirmações I e III estão corretas.","d) Somente as afirmações II e III estão corretas.","e) Todas as afirmações estão corretas." ],["a) 2,4π m", "b) 1,2π m","c) 0,8 m","d) 1,2 m","e) 0,8π m "],["a) 60 pessoas","b) 55 pessoas","c) 50 pessoas","d) 10 pessoas","e) 65 pessoas "],["a) 8,5 e 10","b) 10 e 8,5","c)  1 e 2","d) 2 e1","e) 10,5 e 8"],["a) 80","b) 60","c) 96","d) 72","e) 84"],["(A) 36","(B) 40","(C) 41","(D) 42","(E) 45"],["(A) 234","(B) 729","(C) 730","(D) 1.093","(E) 2.187"],["(A) R$ 1.895,00","(B) R$ 2.085,00","(C) R$ 2.350,00","(D) R$ 3.640,00","(E) R$ 6.295,00"],["(A) aumento de 9%.","(B) redução de 5%.","(C) redução de 9%.","(D) aumento de 19%.","(E) igualdade de áreas."],["(A) a partir do 4° mês.","(B) a partir do 5° mês.","(C) a partir do 7° mês.","(D) a partir do 10° mês.","(E) sempre."]];
 
 var gabarito = ["d) Somente as afirmações II e III estão corretas.","e) 0,8π m ","c) 50 pessoas","d) 2 e1","c) 96","(C) 41","(D) 1.093","(A) R$ 1.895,00","(C) redução de 9%.","(B) a partir do 5° mês."];  
-
+/*
 var aux = 0;
 var ctd = 0;
 var pontos = 0;
@@ -44,3 +44,4 @@ function clicou() {
 function fim(){
     alert("FIM DE JOGO\n VOCE é BURROOO\nvoce fez "+pontos+" pontos");
 }
+*/
