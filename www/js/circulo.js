@@ -157,11 +157,6 @@ class Retangulo {
     let inputB = document.createElement("INPUT");
     inputB.type = "number";
     inputB.id = "b";
-    let labelP = document.createElement("label");
-    labelP.textContent = "Dígite o valor da profundidade (c):";
-    let inputP = document.createElement("INPUT");
-    inputP.type = "number";
-    inputP.id = "c";
     let labelH = document.createElement("label");
     labelH.textContent = "Dígite o valor da altura (h):";
     let inputH = document.createElement("INPUT");
@@ -172,8 +167,6 @@ class Retangulo {
     let br3 = document.createElement("BR");
     let br4 = document.createElement("BR");
     let br5 = document.createElement("BR");
-    let br6 = document.createElement("BR");
-    let br7 = document.createElement("BR");
     let button = document.createElement("BUTTON");
     if (img != "undefined") contem.removeChild(img);   
     img = document.createElement("IMG");
@@ -190,12 +183,8 @@ class Retangulo {
     form.appendChild(br3);
     form.appendChild(inputH);
     form.appendChild(br4);
-    form.appendChild(labelP);
-    form.appendChild(br5);
-    form.appendChild(inputP);
-    form.appendChild(br6);
     form.appendChild(button);
-    form.appendChild(br7);
+    form.appendChild(br5);
     form.appendChild(contem);
     contem.appendChild(img);
     
@@ -210,13 +199,8 @@ class Isosceles {
     let inputB = document.createElement("INPUT");
     inputB.type = "number";
     inputB.id = "b";
-    let labelP = document.createElement("label");
-    labelP.textContent = "Dígite o valor da profundidade (c):";
-    let inputP = document.createElement("INPUT");
-    inputP.type = "number";
-    inputP.id = "c";
     let labelH = document.createElement("label");
-    labelH.textContent = "Dígite o valor da altura (h):";
+    labelH.textContent = "Dígite o valor do lado (L):";
     let inputH = document.createElement("INPUT");
     inputH.type = "number";
     inputH.id = "h";
@@ -225,8 +209,6 @@ class Isosceles {
     let br3 = document.createElement("BR");
     let br4 = document.createElement("BR");
     let br5 = document.createElement("BR");
-    let br6 = document.createElement("BR");
-    let br7 = document.createElement("BR");
     let button = document.createElement("BUTTON");
     if (img != "undefined") contem.removeChild(img);   
     img = document.createElement("IMG");
@@ -243,17 +225,97 @@ class Isosceles {
     form.appendChild(br3);
     form.appendChild(inputH);
     form.appendChild(br4);
-    form.appendChild(labelP);
-    form.appendChild(br5);
-    form.appendChild(inputP);
-    form.appendChild(br6);
     form.appendChild(button);
-    form.appendChild(br7);
+    form.appendChild(br5);
     form.appendChild(contem);
     contem.appendChild(img);
     
   }
 }
+
+class Equilatero {
+  constructor(){
+    limpa ();
+    let labelB = document.createElement("label");
+    labelB.textContent = "Dígite o valor do lado (L):";
+    let inputB = document.createElement("INPUT");
+    inputB.type = "number";
+    inputB.id = "b";
+    let br1 = document.createElement("BR");
+    let br2 = document.createElement("BR");
+    let br3 = document.createElement("BR");
+    let button = document.createElement("BUTTON");
+    if (img != "undefined") contem.removeChild(img);   
+    img = document.createElement("IMG");
+    img.src = "equilatero.png"
+    img.style.width = "150px";
+    button.type = "submit";
+    button.style.width = "100px";
+    button.textContent = "Calcular";
+    form.appendChild(labelB);
+    form.appendChild(br1);
+    form.appendChild(inputB);
+    form.appendChild(br2);
+    form.appendChild(button);
+    form.appendChild(br3);
+    form.appendChild(contem);
+    contem.appendChild(img);
+    
+  }
+}
+
+class TrianguloRetangulo {
+  constructor(){
+    limpa ();
+    let labelB = document.createElement("label");
+    labelB.textContent = "Dígite o valor da base (b):";
+    let inputB = document.createElement("INPUT");
+    inputB.type = "number";
+    inputB.id = "b";
+    let labelC = document.createElement("label");
+    labelC.textContent = "Dígite o valor do lado (c):";
+    let inputC = document.createElement("INPUT");
+    inputC.type = "number";
+    inputC.id = "c";
+    let labelH = document.createElement("label");
+    let inputH = document.createElement("INPUT");
+    labelH.textContent = "Dígite o valor da altura (a):";
+    inputH.type = "number";
+    inputH.id = "a";
+    let br1 = document.createElement("BR");
+    let br2 = document.createElement("BR");
+    let br3 = document.createElement("BR");
+    let br4 = document.createElement("BR");
+    let br5 = document.createElement("BR");
+    let br6 = document.createElement("BR");
+    let button = document.createElement("BUTTON");
+    if (img != "undefined") contem.removeChild(img);   
+    img = document.createElement("IMG");
+    img.src = "trianguloRetangulo.png"
+    img.style.width = "150px";
+    button.type = "submit";
+    button.style.width = "100px";
+    button.textContent = "Calcular";
+    form.appendChild(labelH);
+    form.appendChild(br1);
+    form.appendChild(inputH);
+    form.appendChild(br2);
+    form.appendChild(labelB);
+    form.appendChild(br3);
+    form.appendChild(inputB);
+    form.appendChild(br4);
+    form.appendChild(labelC);
+    form.appendChild(br5);
+    form.appendChild(inputC);
+    form.appendChild(br6);
+    form.appendChild(button);
+    form.appendChild(contem);
+    contem.appendChild(img);
+    
+  }
+}
+
+
 
 let selectOption = document.getElementById('selectOption');
 selectOption.addEventListener('change', function(){
@@ -279,8 +341,10 @@ selectOption.addEventListener('change', function(){
     if (valor == "equilatero") {
       let classLosango = new Equilatero();
     }  
+    if (valor == "trianguloRetangulo") {
+      let classLosango = new TrianguloRetangulo();
+    } 
 });
-
 
 form.addEventListener('submit', function(e) {
   let valor = document.getElementById('selectOption').value;
@@ -331,6 +395,7 @@ form.addEventListener('submit', function(e) {
     });
     document.querySelector('thead').innerHTML = html;
   }
+
   if (valor == "losango") {
     let D = document.getElementById("D").value;
     D = parseInt(D);
@@ -361,8 +426,8 @@ form.addEventListener('submit', function(e) {
     let desenvolDia = "D = "+l+"² + "+l+"²";
     let desenvolPer = "P = "+l+" * "+l+" * "+l+" * "+l;
     let respostaArea = "A = "+l*l; 
-    let respostaPer = "P = "+l * l * l * l;
-    let resol = (l * l) + (l * l);
+    let respostaPer = "P = "+4 * l;
+    let resol = (2 * l) + (2 * l);
     let respostaDia = "D = "+resol;
     let html = template({
       circulo: {coluna1:"Área", formula1:formulaArea, desenvolvimento1:desenvolArea, resposta1:respostaArea, coluna2:"Perímetro", formula2: formulaPer, desenvolvimento2:desenvolPer, resposta2:respostaPer, coluna3:"Diagonal", formula3:formulaDia, desenvolvimento3:desenvolDia, resposta3:respostaDia}
@@ -397,25 +462,58 @@ form.addEventListener('submit', function(e) {
   if (valor == "isosceles") {
     let b = document.getElementById("b").value;
     let h = document.getElementById("h").value;
-    let c = document.getElementById("c").value;
     b = parseInt(b);
     h = parseInt(h);
+    let source = document.querySelector("#source").innerHTML;
+    let template = Handlebars.compile(source);
+    let formulaArea = "A = (b * L)/2";
+    let formulaP = "P = 2 * L + b ";
+    let desenvolArea = "A = "+b * h +"/"+2;
+    let desenvolP = "P = 2 * "+h+" + "+b;
+    let respostaArea = "A = "+(b*h)/2; 
+    let conta = (2 * h) + b;
+    let respostaP = "P = "+conta;
+    let html = template({
+      circulo: {coluna1:"Área", formula1:formulaArea, desenvolvimento1:desenvolArea, resposta1:respostaArea,coluna2:"Perímetro", formula2:formulaP, desenvolvimento2:desenvolP, resposta2:respostaP}
+    });
+    document.querySelector('thead').innerHTML = html;
+  }
+
+  if (valor == "equilatero") {
+    let b = document.getElementById("b").value;
+    b = parseInt(b);
+    let source = document.querySelector("#source").innerHTML;
+    let template = Handlebars.compile(source);
+    let formulaArea = "A = (l² * √3)/4";
+    let formulaP = "P = 3 * L";
+    let desenvolArea = "A = ("+b+" * "+b+" * √3)/4 --> ("+b*b+" * "+Math.sqrt(3)+")/"+4;
+    let desenvolP = "P = 3 * "+b;
+    let respostaArea = "A = "+((b*b)*Math.sqrt(3))/4;
+    let respostaP = "P = "+3*b;
+    let html = template({
+      circulo: {coluna1:"Área", formula1:formulaArea, desenvolvimento1:desenvolArea, resposta1:respostaArea, coluna2:"Perímetro", formula2:formulaP, desenvolvimento2:desenvolP, resposta2:respostaP}
+    });
+    document.querySelector('thead').innerHTML = html;
+  }
+
+  if (valor == "trianguloRetangulo") {
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+    a = parseInt(a);
+    b = parseInt(b);
     c = parseInt(c);
     let source = document.querySelector("#source").innerHTML;
     let template = Handlebars.compile(source);
-    let formulaArea = "A = (b * h)/2";
-    let formulaV= "V = ((b * h)/2) * c";
-    let formulaP = "P = 2(√h²+(b/2)²+b)";
-    let desenvolArea = "A = "+b * h +"/"+2;
-    let desenvolV = "V = (("+b+" * "+h+") /2) * "+c+" -- > ("+b*h+"/2) * "+c+" --> "+(b*h)/2+" * c";
-    let resol = (h*h) + (b/2) + b;
-    let soma = (h*h) + (b/2) + b;
-    let desenvolP = "P = 2√("+h+" * "+h+") + ("+b+"/2) + "+b+ " --> "+"2√("+h*h+") + ("+b/2+") + "+b+" -- > 2√"+soma+" -- > 2 * "+Math.sqrt(resol);
-    let respostaArea = "A = "+(b*h)/2; 
-    let respostaV = "V = "+(b/2) * c;
-    let respostaP = "P = "+ 2 * Math.sqrt(resol);
+    let formulaArea = "A = (b * c)/2";
+    let formulaP = "P = (a + b + c)/2";
+    let desenvolArea = "A = "+b+" * "+c+"/2 -- > "+b*c+"/2";
+    let soma = a+b+c;
+    let desenvolP = "P = ("+a+"+"+b+"+"+c+")/2 -- > "+soma+"/2";
+    let respostaArea = "A = "+(b*c)/2;
+    let respostaP = "P = "+soma/2;
     let html = template({
-      circulo: {coluna1:"Área", formula1:formulaArea, desenvolvimento1:desenvolArea, resposta1:respostaArea, coluna2:"Volume", formula2: formulaV, desenvolvimento2:desenvolV, resposta2:respostaV, coluna3:"Perímetro", formula3:formulaP, desenvolvimento3:desenvolP, resposta3:respostaP}
+      circulo: {coluna1:"Área", formula1:formulaArea, desenvolvimento1:desenvolArea, resposta1:respostaArea,coluna2:"Perímetro", formula2:formulaP, desenvolvimento2:desenvolP, resposta2:respostaP}
     });
     document.querySelector('thead').innerHTML = html;
   }
